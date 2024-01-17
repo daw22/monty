@@ -36,5 +36,5 @@ void free_glob(void)
 		free_stack(glob->head);
 		glob->head = NULL;
 	}
-	free (glob);
+	free(glob);
 }

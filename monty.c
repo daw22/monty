@@ -9,10 +9,9 @@ void init_glob(void);
  *
  * Return: Always 0 on success
  */
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 	size_t len = 0;
-	ssize_t read;
 
 	/** validate args **/
 	if (argc != 2)
@@ -30,7 +29,7 @@ int main(int argc, char** argv)
 		return (EXIT_FAILURE);
 	}
 	/** read ,parse and execute file **/
-	while ((read = getline(&(glob->line), &len, glob->fp)) != -1)
+	while (getline(&(glob->line), &len, glob->fp) != -1)
 	{
 		parse_line();
 
@@ -43,7 +42,7 @@ int main(int argc, char** argv)
 		execute_line();
 		free_tokens();
 	}
-	pclose(glob->fp);
+	fclose(glob->fp);
 	free_glob();
 	return (0);
 }

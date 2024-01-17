@@ -2,8 +2,6 @@
 
 /**
  * parse_line - parses a line from bytecode file
- * @line: string
- * @line_num: the line number
  *
  * Return: pointer to a structure containing the opcode and the arg
  */
@@ -43,7 +41,6 @@ void parse_line(void)
 
 /**
  * get_instruction - gets the opcode and it's corsponding function
- * @inst: instruction string
  *
  * Return: pointer to the corsponding function
  */
@@ -78,7 +75,7 @@ void execute_line(void)
 	stack_t *node = NULL;
 
 	get_instruction();
-	//if (glob->n_tokens == 0)
-	//	return;
+	if (glob->n_tokens == 0)
+		return;
 	glob->inst->f(&node, glob->line_num);
 }

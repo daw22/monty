@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * is-nan - is not a number
+ * is_nan - is not a number
  * @str: the string to check
  *
  * Return: 1 if not a number, o if number

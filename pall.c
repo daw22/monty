@@ -10,6 +10,8 @@ void pall(stack_t **stack, unsigned int n)
 {
 	stack_t *head;
 
+	stack = stack;
+	n = n;
 	if (glob->head == NULL)
 		return;
 	head = glob->head;
