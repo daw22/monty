@@ -70,6 +70,7 @@ void free_tokens(void);
 void free_glob(void);
 void push(stack_t **, unsigned int);
 void pall(stack_t **, unsigned int);
+void pint(stack_t **, unsigned int);
 /** fails **/
 int malloc_fail(void);
 int invalid_inst(void);
