@@ -1,7 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-#define _GNU_SOURCE 
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -71,6 +71,7 @@ void free_glob(void);
 void push(stack_t **, unsigned int);
 void pall(stack_t **, unsigned int);
 void pint(stack_t **, unsigned int);
+void pop(stack_t **, unsigned int);
 /** fails **/
 int malloc_fail(void);
 int invalid_inst(void);
