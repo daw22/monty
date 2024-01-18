@@ -50,7 +50,7 @@ void get_instruction(void)
 	instruction_t instructions[] = {
 		{"push", &push}, {"pall", &pall},
 		{"pint", &pint}, {"pop", &pop},
-		{NULL, NULL}
+		{"swap", &swap}, {NULL, NULL}
 	};
 
 	if (glob->n_tokens == 0)
