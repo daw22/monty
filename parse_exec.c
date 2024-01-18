@@ -58,6 +58,12 @@ void get_instruction(void)
 
 	if (glob->n_tokens == 0)
 		return;
+	if (glob->tokens[0][0] == '#')
+	{
+		glob->inst->opcode = "nop";
+		glob->inst->f = &nop;
+		return;
+	}
 	while (instructions[i].opcode != NULL)
 	{
 		if (strcmp(glob->tokens[0], instructions[i].opcode) == 0)
