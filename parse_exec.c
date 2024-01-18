@@ -52,7 +52,8 @@ void get_instruction(void)
 		{"pint", &pint}, {"pop", &pop},
 		{"swap", &swap}, {"add", &add},
 		{"nop", &nop}, {"sub", &sub},
-		{"div", &divide}, {NULL, NULL}
+		{"div", &divide}, {"mul", &mul},
+		{NULL, NULL}
 	};
 
 	if (glob->n_tokens == 0)
