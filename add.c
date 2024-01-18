@@ -8,7 +8,7 @@
  */
 void add(stack_t **stack, unsigned int n)
 {
-	stack_t *head, *st2, *new;
+	stack_t *head, *st2;
 	int sum;
 
 	stack = stack;
@@ -23,15 +23,6 @@ void add(stack_t **stack, unsigned int n)
 	head = glob->head;
 	st2 = head->next;
 	sum = head->n + st2->n;
-	pop(&(glob->head), n);
-	glob->head = st2;
-	new = malloc(sizeof(stack_t));
-	if (new == NULL)
-		malloc_fail();
-	new->n = sum;
-	new->next = st2->next;
-	if (st2->next != NULL)
-		st2->next->prev = new;
-	pop(&(glob->head), n);
-	glob->head = new;
+	st2->n = sum;
+	pop(&(head), n);
 }
