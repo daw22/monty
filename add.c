@@ -24,5 +24,7 @@ void add(stack_t **stack, unsigned int n)
 	st2 = head->next;
 	sum = head->n + st2->n;
 	st2->n = sum;
-	pop(&(head), n);
+	st2->prev = NULL;
+	glob->head = st2;
+	free(head);
 }

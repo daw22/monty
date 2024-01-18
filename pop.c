@@ -18,6 +18,5 @@ void pop(stack_t **stack, unsigned int n)
 		exit(EXIT_FAILURE);
 	}
 	glob->head = glob->head->next;
-	glob->head->prev = NULL;
 	free(head);
 }
