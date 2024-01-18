@@ -3,7 +3,7 @@
 /**
  * add - add the top two number of the stack
  * @stack: double pointer to the stack head
- * n: line number add is called
+ * @n: line number add is called
  *
  */
 void add(stack_t **stack, unsigned int n)
@@ -26,5 +26,6 @@ void add(stack_t **stack, unsigned int n)
 	st2->n = sum;
 	st2->prev = NULL;
 	glob->head = st2;
+	glob->n_tokens -= 1;
 	free(head);
 }
