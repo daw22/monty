@@ -36,6 +36,7 @@ int main(int argc, char **argv)
 		if (glob->tokens[0] == NULL)
 		{
 			glob->line_num += 1;
+			free_tokens();
 			continue;
 		}
 		glob->line_num += 1;

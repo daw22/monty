@@ -3,7 +3,7 @@
 /**
  * nop - does nothing
  * @stack: Pointer to the stack.
- * @n: Line number where the nop function is called.
+ * @n: Line number the nop function is called.
  */
 
 void nop(stack_t **stack, unsigned int n)

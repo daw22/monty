@@ -15,7 +15,7 @@ void pall(stack_t **stack, unsigned int n)
 	if (glob->head == NULL)
 		return;
 	head = glob->head;
-	while (head)
+	while (head != NULL)
 	{
 		printf("%d\n", head->n);
 		head = head->next;
