@@ -25,9 +25,21 @@ void push(stack_t **stack, unsigned int n)
 		glob->head = *stack;
 	else
 	{
-		(*stack)->next = glob->head;
-		glob->head->prev = *stack;
-		glob->head = *stack;
+		if (glob->s_or_q == 1)
+		{
+			(*stack)->next = glob->head;
+			glob->head->prev = *stack;
+			glob->head = *stack;
+		}
+		else
+		{
+			stack_t *head = glob->head;
+
+			while (head->next != NULL)
+				head = head->next;
+			head->next = *stack;
+			(*stack)->prev = head;
+		}
 	}
 	glob->stack_size += 1;
 }
