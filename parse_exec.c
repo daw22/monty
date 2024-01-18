@@ -53,7 +53,7 @@ void get_instruction(void)
 		{"swap", &swap}, {"add", &add},
 		{"nop", &nop}, {"sub", &sub},
 		{"div", &divide}, {"mul", &mul},
-		{NULL, NULL}
+		{"mod", &mod}, {NULL, NULL}
 	};
 
 	if (glob->n_tokens == 0)
