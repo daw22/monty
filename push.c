@@ -10,6 +10,8 @@ void push(stack_t **stack, unsigned int n)
 {
 	if (is_nan(glob->tokens[1]) || glob->n_tokens <= 1)
 	{
+		fclose(glob->fp);
+		free_tokens();
 		free_glob();
 		fprintf(stderr, "L%d: usage: push integer\n", n);
 		exit(EXIT_FAILURE);
