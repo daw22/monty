@@ -13,7 +13,7 @@ void add(stack_t **stack, unsigned int n)
 	stack = stack;
 	if (glob->head == NULL || glob->head->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't add, stack is too short\n", n);
+		fprintf(stderr, "L%d: can't add, stack too short\n", n);
 		free_tokens();
 		fclose(glob->fp);
 		free_glob();
