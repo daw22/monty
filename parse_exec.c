@@ -51,7 +51,8 @@ void get_instruction(void)
 		{"push", &push}, {"pall", &pall},
 		{"pint", &pint}, {"pop", &pop},
 		{"swap", &swap}, {"add", &add},
-		{"nop", &nop}, {NULL, NULL}
+		{"nop", &nop}, {"sub", &sub},
+		{NULL, NULL}
 	};
 
 	if (glob->n_tokens == 0)

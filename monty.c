@@ -25,8 +25,7 @@ int main(int argc, char **argv)
 	glob->fp = fopen(argv[1], "r");
 	if (glob->fp == NULL)
 	{
-		/**fprintf(stderr, "Error: Can't open file %s\n", argv[1]);**/
-		fprintf(stderr, "USAGE: monty file\n");
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		return (EXIT_FAILURE);
 	}
 	/** read ,parse and execute file **/
