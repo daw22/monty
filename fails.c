@@ -18,7 +18,7 @@ int malloc_fail(void)
  */
 int invalid_inst(void)
 {
-	fprintf(stderr, "L%d: invalid instruction %s\n",
+	fprintf(stderr, "L%d: unknown instruction %s\n",
 			glob->line_num, glob->tokens[0]);
 	free_tokens();
 	fclose(glob->fp);
