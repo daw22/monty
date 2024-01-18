@@ -22,5 +22,7 @@ void add(stack_t **stack, unsigned int n)
 	head = glob->head;
 	head->next->n = head->n + head->next->n;
 	glob->head = head->next;
+	glob->head->prev = NULL;
+	glob->n_tokens -= 1;
 	free(head);
 }
