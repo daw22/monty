@@ -55,7 +55,7 @@ void get_instruction(void)
 		{"div", &divide}, {"mul", &mul},
 		{"mod", &mod}, {"pchar", &pchar},
 		{"pstr", &pstr}, {"rotl", &rotl},
-		{NULL, NULL}
+		{"rotr", &rotr}, {NULL, NULL}
 	};
 
 	if (glob->n_tokens == 0)
