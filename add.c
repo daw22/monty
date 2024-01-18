@@ -8,8 +8,7 @@
  */
 void add(stack_t **stack, unsigned int n)
 {
-	stack_t *head, *st2;
-	int sum;
+	stack_t *head;
 
 	stack = stack;
 	if (glob->head == NULL || glob->head->next == NULL)
@@ -21,11 +20,7 @@ void add(stack_t **stack, unsigned int n)
 		exit(EXIT_FAILURE);
 	}
 	head = glob->head;
-	st2 = head->next;
-	sum = head->n + st2->n;
-	st2->n = sum;
-	st2->prev = NULL;
-	glob->head = st2;
-	glob->n_tokens -= 1;
+	head->next->n = head->n + head->next->n;
+	glob->head = head->next;
 	free(head);
 }
